@@ -1,0 +1,21 @@
+{
+  "name": "autoinject-ts",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "https://github.com/sanyatuning/node-autoinject-ts",
+  "description": "Dependency Injection Container for TypeScript with minimal configuration",
+  "dependencies": {
+    "reflect-metadata": "^0.1.10"
+  },
+  "devDependencies": {
+    "alsatian": "^2.0.0",
+    "typescript": "^2.6.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc",
+    "pretest": "tsc",
+    "test": "alsatian test/*.js"
+  }
+}
