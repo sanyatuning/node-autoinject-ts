@@ -30,14 +30,14 @@ export class ContainerTest {
     public missingAnnotationError() {
         const container = new Container();
         Expect(() => container.get(C))
-            .toThrowError(Error, 'Missing @autoinject() annotation for "C"');
+            .toThrowError(Error, 'Missing @autoinject() annotation for "C": C');
     }
 
     @Test()
     public nativeClassError() {
         const container = new Container();
         Expect(() => container.get(D))
-            .toThrowError(Error, 'Dependency on native "Object": D');
+            .toThrowError(Error, 'Dependency on native "Object": D -> Object');
     }
 
     @Test()

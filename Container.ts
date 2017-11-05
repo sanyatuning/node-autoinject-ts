@@ -24,7 +24,8 @@ export class Container {
     }
 
     private getInternal = <T>(type: Class<T>, pos = ''): T => {
-        assertType(type, pos);
+        const nextPos = (pos ? pos + ' -> ' : '') + (type && type.name);
+        assertType(type, nextPos);
         if (this.instances.has(type)) {
             return this.instances.get(type);
         }
@@ -34,7 +35,7 @@ export class Container {
             const factory = this.factories.get(type);
             inst = factory();
         } else {
-            const params = this.getParamsFor(type, pos);
+            const params = this.getParamsFor(type, nextPos);
             inst = new type(...params) as any;
         }
         this.instances.set(type, inst);
@@ -43,13 +44,12 @@ export class Container {
     }
 
     private getParamsFor<T>(type: Class<T>, pos: string) {
-        const nextPos = (pos ? pos + ' -> ' : '') + (type && type.name);
         const defaults = getDefaultValues(type);
-        const paramTypes = defaults.length ? getParamTypes(type) : [];
+        const paramTypes = defaults.length ? getParamTypes(type, pos) : [];
 
         return paramTypes.map((b: any, index: number) => {
             try {
-                return this.getInternal(b, nextPos);
+                return this.getInternal(b, pos);
             } catch (e) {
                 const defaultValue = defaults[index];
                 if (typeof defaultValue === 'undefined') {
@@ -76,10 +76,10 @@ function isNative<T>(type: Class<T>) {
     return isNativeRegex.test('' + type);
 }
 
-function getParamTypes<T>(type: Class<T>) {
+function getParamTypes<T>(type: Class<T>, pos: string) {
     const metadata = Reflect.getMetadata('design:paramtypes', type);
     if (!metadata) {
-        throw new Error('Missing @autoinject() annotation for "' + type.name + '"');
+        throw new Error('Missing @autoinject() annotation for "' + type.name + '": ' + pos);
     }
     return Array.prototype.slice.call(metadata);
 }
