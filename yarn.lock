@@ -25,8 +25,8 @@ ansi-styles@^2.2.1:
   resolved "https://npm.virtual-call-center.eu:40443/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
 argparse@^1.0.7:
-  version "1.0.9"
-  resolved "https://npm.virtual-call-center.eu:40443/argparse/-/argparse-1.0.9.tgz#73d83bc263f86e97f8cc4f6bae1b0e90a7d22c86"
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
   dependencies:
     sprintf-js "~1.0.2"
 
@@ -68,8 +68,8 @@ escape-string-regexp@^1.0.2:
   resolved "https://npm.virtual-call-center.eu:40443/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
 esprima@^4.0.0:
-  version "4.0.0"
-  resolved "https://npm.virtual-call-center.eu:40443/esprima/-/esprima-4.0.0.tgz#4499eddcd1110e0b218bacf2fa7f7f59f55ca804"
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
 
 events-to-array@^1.0.1:
   version "1.1.2"
@@ -116,8 +116,8 @@ isarray@~1.0.0:
   resolved "https://npm.virtual-call-center.eu:40443/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
 
 js-yaml@^3.2.7:
-  version "3.10.0"
-  resolved "https://npm.virtual-call-center.eu:40443/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -164,7 +164,7 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
 
 sprintf-js@~1.0.2:
   version "1.0.3"
-  resolved "https://npm.virtual-call-center.eu:40443/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
+  resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
 
 string_decoder@~1.0.3:
   version "1.0.3"
