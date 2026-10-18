@@ -1,3 +1,7 @@
+# ⚠️ DEPRECATED
+
+> This library is no longer maintained. Similar library: **https://github.com/microsoft/tsyringe**.
+
 # autoinject-ts
 
 Dependency Injection Container for TypeScript with minimal configuration
